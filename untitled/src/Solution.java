@@ -1,3 +1,5 @@
+import java.util.stream.Stream;
+
 public class Solution {
 
     /*
@@ -10,6 +12,14 @@ Note: If the number is a multiple of both 3 and 5, only count it once.
 
 
     public int solution(int number) {
-        //
+        int x = 0;
+        int sum = 0;
+        while (x != number) {
+            if (x % 3 == 0 || x % 5 == 0) {
+                sum += x;
+            }
+            x++;
+        }
+        return sum;
     }
 }
