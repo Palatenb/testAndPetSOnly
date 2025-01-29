@@ -1,4 +1,6 @@
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Solution {
 
@@ -21,5 +23,14 @@ Note: If the number is a multiple of both 3 and 5, only count it once.
             x++;
         }
         return sum;
+    }
+
+    public static boolean validatePin(String pin) {
+
+        if(pin.length()==4 || pin.length()==6){
+            try {return Integer.parseInt(pin.replace("+", "")) >= 0;}
+            catch (Exception e){return false;}
+        }
+        return false;
     }
 }
